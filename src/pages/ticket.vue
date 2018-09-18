@@ -6,16 +6,14 @@
     	<div class="content_tabs">
     		<div class="wrapper_forms">
     			<!-- TICKET BUY -->
-    			<div class="buy_a_ticket" style="color: #000; padding: 50px 0 0 0;">
-    				[% IF next_event %]
-    				<span class="buy" style="display:inline-block;max-width:49%;">
-    			<a href="http://www.go.zenit-kazan.com/rus" target="_blank">Купить билет онлайн</a>
-    		</span>
+    			<div v-if="this.$parent.next_event" class="buy_a_ticket" style="color: #000; padding: 50px 0 0 0;">
+	          <span class="buy" style="display:inline-block;max-width:49%;">
+                <a href="http://www.go.zenit-kazan.com/rus" target="_blank">Купить билет онлайн</a>
+		        </span>
     				<div class="ftr" style="max-width:49%;">
-    					<p>Ближайший матч:&nbsp;<span style="font-weight:bold;">[% PROCESS dt_fmted dt=next_event.date %]</span></p>
-    					<p>[% next_event.club_home.name %]&nbsp;&mdash;&nbsp;[% next_event.club_guest.name %]</p>
+    					<p>Ближайший матч:&nbsp;<span style="font-weight:bold;">{{ getFDate(next_event.date) }}</span></p>
+    					<p>{{ next_event.club_home.name }}&nbsp;&mdash;&nbsp;{{ next_event.club_guest.name }}</p>
     				</div>
-    				[% END %]
     			</div>
 
     			<!-- PROMO COUPON REGISTER -->
@@ -53,19 +51,19 @@
     			</div>
     			<!-- SUBSCRIPTION REGISTER -->
     			<div class="ticket_register" style="color: #3e5462;">
-    				<div name="page-c">
-    					[% IF subscription %]
+    				<div v-if="sub && sub.id" name="page-c">
     					<p><span>Ваш абонемент</span></p>
     					<form name="subscription" class="reg-form st-form">
-    						<span>Номер:</span><input disabled="disabled" type=text name="subscription_num"value="[% subscription.number %]"><br/>
-    						<span>Сектор:</span><input disabled="disabled" type=text name="subscription_sector" value="[% subscription.sector %]"><br/>
-    						<span>Ряд:</span><input disabled="disabled" type=text name="subscription_row" value="[% subscription.row %]"><br/>
-    						<span>Место:</span><input disabled="disabled" type=text name="subscription_seat" value="[% subscription.seat %]"><br/>
+    						<span>Номер:</span><input disabled="disabled" type=text name="subscription_num" :value="sub.number"><br/>
+    						<span>Сектор:</span><input disabled="disabled" type=text name="subscription_sector" :value="sub.sector"><br/>
+    						<span>Ряд:</span><input disabled="disabled" type=text name="subscription_row" :value="sub.row"><br/>
+    						<span>Место:</span><input disabled="disabled" type=text name="subscription_seat" :value="sub.seat"><br/>
     					</form>
-    					[% ELSE %]
+            </div>
+            <div v-else name="page-c">
     					<p><span>Зарегистрировать абонемент</span></p>
     					<form name="subscription" class="reg-form st-form">
-    						<span>Номер:</span>ВЗ1&nbsp;<input style="width: 342px;" type=text name="subscription_num" placeholder="Номер абонемента" required maxlength="20"><br/>
+    						<span>Номер:</span>ВЗ1&nbsp;<input style="width: 330px;" type=text name="subscription_num" placeholder="Номер абонемента" required maxlength="20"><br/>
     						<span>Сектор:</span><input type=text name="subscription_sector" placeholder="Сектор" required maxlength="3"><br/>
     						<span>Ряд:</span><input type=text name="subscription_row" placeholder="Ряд" required maxlength="4"><br/>
     						<span>Место:</span><input type=text name="subscription_seat" placeholder="Место" required maxlength="4"><br/>
@@ -76,7 +74,6 @@
     							<div name="i-success" style="display: none; background-color: #E7F8E7; padding: 5px;">Абонемент зарегистрирован</div>
     						</div>
     					</form>
-    					[% END %]
     				</div>
     			</div>
 
@@ -89,14 +86,21 @@
 <script>
 import MainLayout from '../layouts/Main.vue'
 import ProfileLayout from '../layouts/Profile.vue'
+import FormatHelper from '../utils/format.js'
 export default {
   name: 'page-profile-ticket',
   data () {
     return {
+      person: this.$parent.person,
+      sub: this.$parent.person.subscription,
+      next_event: this.$parent.next_event,
     }
   },
-  props: ['koko'],
-  inject: ['zvueportLogout'],
+  // props: [ 'messages' ],
+  methods: {
+    getFDate: FormatHelper.getFDate,
+  },
+  inject: [ 'zvueportLogout' ],
   components: {
     MainLayout,
     ProfileLayout

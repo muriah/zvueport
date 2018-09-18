@@ -2,7 +2,6 @@
 <main-layout v-bind:person="this.$parent.person">
   <!-- TAB NEWS -->
   <div id="news" class="feed_wrap tab">
-    <!-- [% m_names = ['января','февраля','марта','апреля','мая','июня','июля','августа','сентября','октября','ноября','декабря'] %] -->
     <div class="feed" v-for="post in items">
       <div class="feed_img" v-if="post.pic">
         <a :href="post.link" target="_blank">
@@ -25,6 +24,7 @@
 <script>
 import MainLayout from '../layouts/Main.vue'
 import ZApi from '../services/zapi.js'
+import FormatHelper from '../utils/format.js'
 export default {
   name: 'page-account-newsfeed',
   data () {
@@ -34,7 +34,7 @@ export default {
     }
   },
   methods: {
-    getFDate: ZApi.getFDate,
+    getFDate: FormatHelper.getFDate,
   },
   components: {
     MainLayout

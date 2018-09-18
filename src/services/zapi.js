@@ -1,5 +1,4 @@
 import axios from 'axios';
-import * as moment from 'moment';
 
 let token = 'enxFxp7dzwBogYfQJdOONVowQcQgwiXwdPQl7SEO';
 axios.defaults.baseURL = 'http://zenomania.ru/api';
@@ -34,9 +33,6 @@ export default {
         return response.data;
       });
   },
-  getFDate (dtstring) {
-    return moment(dtstring).format('Do MMMM YYYY в HH:mm');
-  }
   // getItem (id) {
   //   return axios.get('/items/' + id, config)
   //     .then(response => {

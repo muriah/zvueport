@@ -19,11 +19,16 @@ let localStorageKeys = {
 const app = new Vue({
   el: '#app',
   data: {
-    messages: 'koko',
+    messages: {
+      kakaka: 'kukuku',
+      lala: 'falala',
+    },
     is_logged_in: false,
     is_admin: false,
     currentRoute: window.location.pathname,
     person: get_person(),
+    next_event: get_next_event(),
+    refer_link: '//zenomania.ru/join/13'
   },
   methods: {
     zvueportLogin: function(evt) {
@@ -77,10 +82,25 @@ function get_person () {
     points: 459,
     fav_players: [ { name: 'Verbov' }, { name :'Spiridonov' } ],
     sn_accounts: {
-      'vk': { id: 13 },
-      'ig': {  },
-      'fb': { id: 15 },
-      'tw': { id: 16 },
+        'vk': { id: 13 },
+        'ig': {  },
+        'fb': { id: 15 },
+        'tw': { id: 16 },
+    },
+    subscription: {
+      id: 4599,
+      number: 123,
+      sector: 34,
+      row: 24,
+      seat: 9
     }
-  };
+  }
+}
+
+function get_next_event () {
+  return {
+    date: '2018-09-19T19:00:00',
+    club_home: { name: 'HOME CLUB' },
+    club_guest: { name: 'GUEST CLUB' },
+  }
 }

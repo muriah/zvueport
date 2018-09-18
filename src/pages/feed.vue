@@ -6,7 +6,7 @@
     	<div class="invite" id="refer">
     		<p>
     			<span>Пригласи друга</span><br/>
-    			Перешли другу эту ссылку: <a target="_blank" href="[% refer_link | html %]">[% refer_link | html %]</a>, <br>и после его регистрации ты получишь 20 ZEN!
+    			Перешли другу эту ссылку: <a target="_blank" :href="refer_link">{{ refer_link }}</a>, <br>и после его регистрации ты получишь 20 ZEN!
     		</p>
     		<form name="refer" action="#" class="st-form" onsubmit="return false;">
     			<input type="text" size="40" maxlength=100 name="email" placeholder="Email" required />
