@@ -1,0 +1,26 @@
+/* tables */
+table.tablesorter {
+	margin:10px 0pt 15px;
+	text-align: left;
+}
+table.tablesorter thead tr th, table.tablesorter tfoot tr th {
+}
+table.tablesorter thead tr .header {
+	background-image: url(/static/images/bg.gif);
+	background-repeat: no-repeat;
+	background-position: center right;
+	cursor: pointer;
+	cursor: hand;
+}
+table.tablesorter thead tr .headerSortUp {
+	background-image: url(/static/images/asc.gif);
+}
+table.tablesorter thead tr .headerSortDown {
+	background-image: url(/static/images/desc.gif);
+}
+table.tablesorter thead tr .headerSortDown, table.tablesorter thead tr .headerSortUp {
+
+}
+table.tablesorter th {
+	padding: .5em 2em .5em 0.2em;
+}

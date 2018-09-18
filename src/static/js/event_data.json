@@ -1,0 +1,96 @@
+{
+  "data": {
+    "tickets_channels": [
+      {
+        "key": "Касса Kazan Arena",
+        "value": 70
+      },
+      {
+        "key": "Онлайн продажа",
+        "value": 15
+      },
+      {
+        "key": "Заправки ТАИФ НК",
+        "value": 5
+      },
+      {
+        "key": "Корпоративные продажи",
+        "value": 10
+      }
+    ],
+    "price_segmentation": [
+      {
+        "key": 5500,
+        "value": 8
+      },
+      {
+        "key": 5000,
+        "value": 4
+      },
+      {
+        "key": 1500,
+        "value": 37
+      },
+      {
+        "key": 720,
+        "value": 1
+      },
+      {
+        "key": 450,
+        "value": 3
+      },
+      {
+        "key": 400,
+        "value": 2127
+      },
+      {
+        "key": 300,
+        "value": 333
+      },
+      {
+        "key": 200,
+        "value": 359
+      },
+      {
+        "key": 150,
+        "value": 5
+      },
+      {
+        "key": 100,
+        "value": 5
+      }
+    ],
+    "attendance_tribunes": [
+      {
+        "key": "Восток",
+        "value": 60
+      },
+      {
+        "key": "Запад",
+        "value": 25
+      },
+      {
+        "key": "Юг",
+        "value": 10
+      },
+      {
+        "key": "Север",
+        "value": 5
+      }
+    ],
+    "attendance_tickets": [
+      {
+        "key": "tickets",
+        "value": 61
+      },
+      {
+        "key": "promo",
+        "value": 19
+      },
+      {
+        "key": "abonements",
+        "value": 20
+      }
+    ]
+  }
+}

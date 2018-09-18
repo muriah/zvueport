@@ -1,0 +1,14 @@
+@charset "utf-8";
+/* CSS Document */
+.btn, .enter-btn a, .more-btn a, .aside-hint span, .feed-menu li, .feed-tt-list, .pagination li, .feed-prize li, .price-bonus{
+	*zoom :1; 
+	*display: inline;
+}
+
+input[type="text"]{line-height: 41px;}
+
+
+*:first-child+html.group {
+	min-height: 1px;
+	zoom: 1;
+}

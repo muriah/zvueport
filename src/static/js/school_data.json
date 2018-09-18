@@ -1,0 +1,241 @@
+{
+   "data":{
+      "price_segmentation": [
+         {
+           "key": 150,
+           "value": 639
+         },
+         {
+           "key": 200,
+           "value": 1399
+         },
+         {
+           "key": 300,
+           "value": 200
+         }
+      ],
+      "tickets_channels": [
+         {
+           "key": "Сайт tickets.rubin-kazan.ru",
+           "value": 58
+         },
+         {
+           "key": "Кассы Kazan Arena",
+           "value": 42
+         }
+       ],
+      "sales_dynamics":{
+         "data":{
+            "filled_no":{
+               "percents":"47",
+               "total":39631,
+               "value":"23107"
+            },
+            "filled_yes":{
+               "total":39631,
+               "value":"20651",
+               "percents":"53"
+            }
+         },
+         "age":{
+            "44":"14",
+            "74":"2",
+            "16":"130",
+            "33":"36",
+            "69":"4",
+            "":"36996",
+            "39":"19",
+            "34":"28",
+            "32":"44",
+            "15":"47",
+            "37":"22",
+            "41":"16",
+            "12":"3",
+            "29":"71",
+            "20":"175",
+            "75":"1",
+            "1":"28",
+            "17":"222",
+            "49":"9",
+            "48":"16",
+            "54":"9",
+            "31":"50",
+            "14":"5",
+            "9":"2",
+            "66":"4",
+            "21":"124",
+            "4":"3",
+            "30":"62",
+            "76":"2",
+            "67":"8",
+            "64":"10",
+            "58":"7",
+            "63":"7",
+            "68":"3",
+            "53":"14",
+            "55":"15",
+            "28":"71",
+            "19":"244",
+            "23":"110",
+            "7":"1",
+            "2":"7",
+            "81":"1",
+            "42":"15",
+            "57":"10",
+            "59":"11",
+            "52":"7",
+            "6":"1",
+            "13":"2",
+            "38":"17",
+            "45":"15",
+            "11":"1",
+            "24":"85",
+            "43":"13",
+            "46":"13",
+            "36":"30",
+            "27":"79",
+            "47":"11",
+            "25":"73",
+            "18":"273",
+            "26":"88",
+            "70":"5",
+            "62":"10",
+            "51":"15",
+            "22":"116",
+            "35":"31",
+            "50":"11",
+            "60":"3",
+            "61":"5",
+            "56":"12",
+            "40":"31",
+            "65":"6"
+         },
+         "sex":{
+            "gender_m":{
+               "percents":"78",
+               "value":"2082",
+               "total":2637
+            },
+            "gender_f":{
+               "total":2637,
+               "value":"555",
+               "percents":"21"
+            }
+         },
+         "source":{
+            "other":{
+               "total":39631,
+               "value":"4",
+               "percents":"00"
+            },
+            "RubinSchoolPromo2016":{
+               "percents":"07",
+               "value":"2988",
+               "total":39631
+            },
+            "PromoManual/2015-2016":{
+               "percents":"22",
+               "value":"8838",
+               "total":39631
+            },
+            "./rubin/subs_14-15.csv":{
+               "value":"357",
+               "total":39631,
+               "percents":"00"
+            },
+            "PromoTickets2014-15":{
+               "percents":"44",
+               "value":"17513",
+               "total":39631
+            },
+            "RubinSubOrder2015-16":{
+               "total":39631,
+               "value":"685",
+               "percents":"01"
+            },
+            "./rubin/ID_cards.csv/Портал":{
+               "percents":"03",
+               "total":39631,
+               "value":"1554"
+            },
+            "PromoTickets2015-16":{
+               "total":39631,
+               "value":"6965",
+               "percents":"17"
+            },
+            "SITE_REGISTRATION":{
+               "value":"1",
+               "total":39631,
+               "percents":"00"
+            },
+            "./rubin/subs_13-14.csv":{
+               "value":"726",
+               "total":39631,
+               "percents":"01"
+            }
+         }
+      },
+      "school_attendance": [
+         {
+           "school": "МБОУ \"Гимназия №7\" Ново-Савиновского района г. Казани",
+           "class_number": "8а",
+           "came_to_match": 4,
+           "registration_to_match": 7
+         },
+         {
+           "school": "МБОУ \"Гимназия №7\" Ново-Савиновского района г. Казани",
+           "class_number": "7б",
+           "came_to_match": 1,
+           "registration_to_match": 10
+         },
+         {
+           "school": "МБОУ \"Гимназия №7\" Ново-Савиновского района г. Казани",
+           "class_number": "9в",
+           "came_to_match": 4,
+           "registration_to_match": 7
+         },
+         {
+           "school": "МБОУ \"Гимназия №7\" Ново-Савиновского района г. Казани",
+           "class_number": "8г",
+           "came_to_match": 3,
+           "registration_to_match": 5
+         },
+         {
+           "school": "МБОУ \"Гимназия №7\" Ново-Савиновского района г. Казани",
+           "class_number": "2б",
+           "came_to_match": 9,
+           "registration_to_match": 20
+         },
+         {
+           "school": "МБОУ \"Гимназия №7\" Ново-Савиновского района г. Казани",
+           "class_number": "11в",
+           "came_to_match": 12,
+           "registration_to_match": 31
+         },
+         {
+           "school": "МБОУ \"Гимназия №19\"",
+           "class_number": "9а",
+           "came_to_match": 49,
+           "registration_to_match": 65
+         },
+         {
+           "school": "МБОУ \"Школа №18\"",
+           "class_number": "6б",
+           "came_to_match": 4,
+           "registration_to_match": 4
+         },
+         {
+           "school": "МБОУ \"Гимназия №4 с татарским языком обучения\" Кировского района г. Казани",
+           "class_number": "7б",
+           "came_to_match": 1,
+           "registration_to_match": 1
+         },
+         {
+           "school": "МБОУ \"Гимназия №4 с татарским языком обучения\" Кировского района г. Казани",
+           "class_number": "7а",
+           "came_to_match": 15,
+           "registration_to_match": 17
+         }
+      ]
+   }
+}

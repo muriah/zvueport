@@ -1,0 +1,45 @@
+input[type="checkbox"],
+input[type="radio"] {
+    display:none;            
+}
+input[type="checkbox"] + label, 
+input[type="radio"] + label {
+  font-size: 18px;
+  font-weight: bold;
+  color: #444;
+  cursor: pointer;
+}
+input[type="checkbox"] + label::before,
+input[type="radio"] + label::after {
+    content: "";
+    display: inline-block;
+    height: 18px;
+    width: 18px;
+    margin: 0 5px 0 0;
+    background-image: url('/static/img/account/sprite.png')no-repeat;
+    background-repeat: no-repeat;
+}
+input[type="checkbox"] + label::after {
+    background-position: 0px  0 px;    
+}
+input[type="radio"] + label::after {
+    background-position: 0px 0px; width:50px; height:50px; display:inline-block; float:right;  margin-top:-90px;
+}
+input[type="checkbox"]:checked + label::after {
+    background-position:0px  0px;
+}
+input[type="radio"]:checked + label::after {
+    background-position: 0px -50px;width:50px; height:50px;display:inline-block; float:right;margin-top:-90px;
+}
+input[type="checkbox"]:disabled + label::after  {
+    background-position: -152px -260px;
+}
+input[type="checkbox"]:checked:disabled + label::after  {
+    background-position: -171px -260px;
+}
+input[type="radio"]:disabled + label::after  {
+    background-position: 0px  0px; width:50px; height:50px; display:inline-block; float:right;margin-top:-90px;
+}
+input[type="radio"]:checked:disabled + label::after  {
+    background-position: 0px 0px;
+}​
