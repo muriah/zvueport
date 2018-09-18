@@ -24,7 +24,7 @@
 </template>
 <script>
 import MainLayout from '../layouts/Main.vue'
-import ZApi from '../../services/zapi.js'
+import ZApi from '../services/zapi.js'
 export default {
   name: 'page-account-newsfeed',
   data () {

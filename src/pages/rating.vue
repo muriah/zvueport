@@ -23,9 +23,9 @@
 </template>
 <script>
 import MainLayout from '../layouts/Main.vue'
-import RatingList from './ratinglist.vue'
-import ZApi from '../../services/zapi.js'
-import Tabs from '../../utils/tabs.js'
+import RatingList from '../components/ratinglist.vue'
+import ZApi from '../services/zapi.js'
+import Tabs from '../utils/tabs.js'
 export default {
   name: 'page-account-rating',
   data () {

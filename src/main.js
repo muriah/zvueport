@@ -50,8 +50,8 @@ const app = new Vue({
     ViewComponent () {
       const matchingView = routes[this.currentRoute];
       return matchingView
-        ? require('./assets/components/' + matchingView + '.vue').default
-        : require('./assets/components/404.vue').default;
+        ? require('./pages/' + matchingView + '.vue').default
+        : require('./pages/404.vue').default;
     }
   },
   render (h) {
