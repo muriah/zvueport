@@ -6,7 +6,7 @@
     	<div class="invite" id="refer">
     		<p>
     			<span>Пригласи друга</span><br/>
-    			Перешли другу эту ссылку: <a target="_blank" :href="refer_link">{{ refer_link }}</a>, <br>и после его регистрации ты получишь 20 ZEN!
+    			Перешли другу эту ссылку: <a target="_blank" :href="person.refer_link">{{ person.refer_link }}</a>, <br>и после его регистрации ты получишь 20 ZEN!
     		</p>
     		<form name="refer" action="#" class="st-form" onsubmit="return false;">
     			<input type="text" size="40" maxlength=100 name="email" placeholder="Email" required />
@@ -21,8 +21,7 @@
     		</form>
     	</div>
     	<div>
-    		<div id="feed-items">
-    		</div>
+        <feed-item-list v-bind:feedItemList="this.items" v-bind:feedTitles="this.$parent.feedTitles"></feed-item-list>
     		<div class="btn-form">
     			<button class="btn" name="feed_next_list" type="button" style="margin: 0 auto; margin-top: 10px; display: block;">Загрузить еще</button>
     		</div>
@@ -34,17 +33,34 @@
 <script>
 import MainLayout from '../layouts/Main.vue'
 import ProfileLayout from '../layouts/Profile.vue'
+import FeedItemList from '../components/FeedItemList.vue'
+import ZApi from '../services/zapi.js'
+import FormatHelper from '../utils/format.js'
 export default {
   name: 'page-profile-feed',
+  inject: ['zvueportLogout'],
   data () {
     return {
+      person: this.$parent.person,
+      items: [],
+      loading: true,
     }
   },
-  props: ['koko'],
-  inject: ['zvueportLogout'],
+  methods: {
+    getFDate: FormatHelper.getFDate,
+  },
   components: {
     MainLayout,
-    ProfileLayout
+    ProfileLayout,
+    FeedItemList
+  },
+  created () {
+    if (0 === this.items.length) {
+      ZApi.getUserFeed()
+        .then(items => this.items = items)
+        .catch(error => console.log(error))
+        .finally(() => this.loading = false);
+    }
   }
 }
 </script>

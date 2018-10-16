@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-let token = 'enxFxp7dzwBogYfQJdOONVowQcQgwiXwdPQl7SEO';
+let token = 'qbpExGdW4rTjrDk3zEWmn5dwSBWIifBhV1K3jjz8';
 axios.defaults.baseURL = 'http://zenomania.ru/api';
 // axios.defaults.headers.common['M-Authorization'] = 'Token ' + token;
 
@@ -32,6 +32,25 @@ export default {
       .then(response => {
         return response.data;
       });
+  },
+  getUserFeed () {
+    return axios.get('/m_zenrecords', config)
+      .then(response => {
+        return response.data;
+      });
+//       {
+// "giveaway": {
+// "name": "В честь дня рождения клуба Зенит-Казань",
+// "id": "27"
+// },
+// "dtepoch": 1494666666,
+// "desc": "В честь дня рождения клуба Зенит-Казань (День рождения клуба 2017)",
+// "frozen": 0,
+// "dtstring": "2017-05-13T09:11:06",
+// "zen": "150",
+// "id": "200084",
+// "type": "gift"
+// },
   },
   // getItem (id) {
   //   return axios.get('/items/' + id, config)

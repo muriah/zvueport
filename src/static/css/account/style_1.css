@@ -643,7 +643,9 @@ ul.men_in li {
     margin-bottom: 20px;
     text-align: center;
 }
-
+.list_img img {
+  height: 100px;
+}
 .list_txt {
     width: 678;
     font-weight: lighter;
@@ -2188,3 +2190,10 @@ input[type="text"].busy, input[type="text"].invalid, input[type="text"].missing,
 }
 div > a { display: inline-block; width: 100%; height: 100%; }
 div[data-id="rules-popup"] { background-color: #fff; }
+
+#d-ticket-img {
+  background: url('../../img/ticket-blank.png') no-repeat;
+  width: 477px;
+  height: 227px;
+  margin: 10px 0;
+}

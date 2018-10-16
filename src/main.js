@@ -28,7 +28,7 @@ const app = new Vue({
     currentRoute: window.location.pathname,
     person: get_person(),
     next_event: get_next_event(),
-    refer_link: '//zenomania.ru/join/13'
+    feedTitles: {},
   },
   methods: {
     zvueportLogin: function(evt) {
@@ -76,6 +76,7 @@ $('#rating .ul-tab-headers').on('click', 'li>a', function(evt) {
 
 function get_person () {
   return {
+    id: 2344,
     first_name: 'Mr',
     last_name: 'Koroviev',
     top_place: 23,
@@ -93,7 +94,8 @@ function get_person () {
       sector: 34,
       row: 24,
       seat: 9
-    }
+    },
+    refer_link: 'http://zenomania.ru/join/2344',
   }
 }
 

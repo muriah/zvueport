@@ -36,7 +36,7 @@
     			<div class="ticket_register">
     				<div name="page-b">
     					<p><span>Зарегистрировать билет</span></p>
-    					<img src="/static/img/ticket-blank.png" style="margin: 10px 0;" />
+              <div id="d-ticket-img"></div>
     					<form name="ticket" class="reg-form st-form">
     						<input type="text" name="ticket_num" placeholder="XXXXXXXXXXXXX" maxlength="13" required />
     						<button name="save" style="padding: 9px 25px; display: inline; margin: 0;">Отправить</button>
